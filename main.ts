@@ -24,7 +24,7 @@ basic.pause(100)
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
     Sekunden += 1
-    basic.pause(500)
+    basic.pause(800)
     if (Sekunden == 60) {
         Minuten += 1
         Sekunden = 0
