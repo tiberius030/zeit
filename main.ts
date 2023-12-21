@@ -8,6 +8,8 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         . . . . .
         `)
     basic.showNumber(Minuten)
+    basic.pause(200)
+    basic.clearScreen()
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showNumber(Sekunden)
@@ -22,6 +24,7 @@ basic.pause(100)
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
     Sekunden += 1
+    basic.pause(500)
     if (Sekunden == 60) {
         Minuten += 1
         Sekunden = 0
