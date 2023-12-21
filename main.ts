@@ -9,9 +9,13 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         `)
     basic.showNumber(Minuten)
 })
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
+    basic.showNumber(Sekunden)
+})
 let Stunden = 0
 let Minuten = 0
 let Sekunden = 0
+Sekunden = 0
 Minuten = 0
 Stunden = 0
 basic.pause(100)
