@@ -131,7 +131,7 @@ basic.pause(3000)
 basic.clearScreen()
 basic.forever(function () {
     Sekunden += 1
-    basic.pause(823)
+    basic.pause(998)
     if (Sekunden == 60) {
         Minuten += 1
         Sekunden = 0
