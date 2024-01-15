@@ -1,4 +1,4 @@
-input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function on_button_a() {
     basic.showNumber(Stunden)
     basic.showLeds(`
         . . . . .
@@ -11,7 +11,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.pause(200)
     basic.clearScreen()
 })
-input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function on_button_b() {
     basic.showNumber(Sekunden)
 })
 let Stunden = 0
@@ -30,7 +30,8 @@ music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerUp), musi
 basic.showIcon(IconNames.Yes)
 basic.pause(3000)
 basic.clearScreen()
-basic.forever(function () {
+basic.forever(function on_forever() {
+    
     Sekunden += 1
     basic.pause(823)
     if (Sekunden == 60) {
@@ -44,4 +45,5 @@ basic.forever(function () {
     } else {
         basic.setLedColor(0xff0000)
     }
+    
 })
