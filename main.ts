@@ -1,4 +1,4 @@
-input.onButtonEvent(Button.A, input.buttonEventClick(), function on_button_a() {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showNumber(Stunden)
     basic.showLeds(`
         . . . . .
@@ -11,7 +11,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function on_button_a() {
     basic.pause(200)
     basic.clearScreen()
 })
-input.onButtonEvent(Button.B, input.buttonEventClick(), function on_button_b() {
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showNumber(Sekunden)
 })
 let Stunden = 0
@@ -21,6 +21,54 @@ Sekunden = 0
 Minuten = 0
 Stunden = 0
 basic.pause(100)
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(622, music.beat(BeatFraction.Whole))
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(622, music.beat(BeatFraction.Whole))
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+music.playTone(587, music.beat(BeatFraction.Whole))
+music.playTone(523, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+basic.pause(200)
+music.playTone(262, music.beat(BeatFraction.Whole))
+music.playTone(330, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+basic.pause(200)
+music.playTone(330, music.beat(BeatFraction.Whole))
+music.playTone(415, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+music.playTone(523, music.beat(BeatFraction.Whole))
+basic.pause(200)
+music.playTone(330, music.beat(BeatFraction.Half))
+basic.pause(200)
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(622, music.beat(BeatFraction.Whole))
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(622, music.beat(BeatFraction.Whole))
+music.playTone(659, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+music.playTone(587, music.beat(BeatFraction.Whole))
+music.playTone(523, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+basic.pause(200)
+music.playTone(262, music.beat(BeatFraction.Whole))
+music.playTone(330, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+basic.pause(100)
+music.playTone(330, music.beat(BeatFraction.Whole))
+music.playTone(415, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+music.playTone(523, music.beat(BeatFraction.Whole))
+basic.pause(200)
+music.playTone(330, music.beat(BeatFraction.Half))
+basic.pause(200)
+music.playTone(523, music.beat(BeatFraction.Whole))
+music.playTone(494, music.beat(BeatFraction.Whole))
+music.playTone(440, music.beat(BeatFraction.Whole))
+basic.pause(200)
 music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
 music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerUp), music.PlaybackMode.UntilDone)
 music.play(music.createSoundExpression(WaveShape.Square, 1600, 1, 255, 0, 382, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
@@ -30,8 +78,7 @@ music._playDefaultBackground(music.builtInPlayableMelody(Melodies.PowerUp), musi
 basic.showIcon(IconNames.Yes)
 basic.pause(3000)
 basic.clearScreen()
-basic.forever(function on_forever() {
-    
+basic.forever(function () {
     Sekunden += 1
     basic.pause(823)
     if (Sekunden == 60) {
@@ -45,5 +92,4 @@ basic.forever(function on_forever() {
     } else {
         basic.setLedColor(0xff0000)
     }
-    
 })
